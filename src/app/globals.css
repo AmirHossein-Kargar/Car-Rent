@@ -1,7 +1,26 @@
 @import "tailwindcss";
+@import "./typography.css";
 
 @theme {
   --color-*: initial;
+
+  /* --- Font Sizes with Line Heights --- */
+  --text-xs: [12px, auto];
+  --text-sm: [14px, 140%];
+  --text-base: [16px, 140%];
+  --text-lg: [18px, 140%];
+  --text-lg-2: [20px, 140%];
+  --text-xl: [24px, 120%];
+  --text-xl-2: [32px, 140%];
+  --text-2xl: [36px, 120%];
+  --text-3xl: [40px, 120%];
+  --text-4xl: [72px, 110%];
+
+  /* --- Font Weights --- */
+  --font-weight-normal: 400; /* Regular */
+  --font-weight-medium: 500; /* Medium */
+  --font-weight-semibold: 600; /* Semibold */
+  --font-weight-bold: 700; /* Bold */
 
   /* Primary Neutral Palette */
   --color-primary-900: #0a196f;
