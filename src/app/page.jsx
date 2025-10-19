@@ -9,7 +9,8 @@ export default function Home() {
       <h4 className="text-lg">text-lg: Hello World (18px)</h4>
       <h5 className="text-xl">text-xl: Hello World (24px)</h5>
       <h6 className="text-2xl">text-2xl: Hello World (36px)</h6>
-      <Button >Label</Button>
+      <Button iconLeft={"/wechat.svg"}>Label</Button>
+      <Button iconRight={"/triangle-down.svg"}>Label</Button>
     </div>
   );
 }

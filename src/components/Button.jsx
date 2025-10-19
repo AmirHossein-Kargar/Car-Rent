@@ -1,9 +1,12 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Button({
   size = "small",
   variant = "primary",
   children,
+  iconLeft,
+  iconRight,
   disabled = false,
 }) {
   const sizes = {
@@ -41,9 +44,27 @@ export default function Button({
   return (
     <button
       disabled={disabled}
-      className={`${sizes[size]} ${variantClass} font-semibold rounded-sm flex justify-center items-center transition-colors`}
+      className={`${sizes[size]} ${variantClass} font-semibold rounded-sm flex justify-center items-center gap-2 transition-colors`}
     >
+     {iconLeft && (
+        <Image
+          src={iconLeft}
+          alt="icon-left"
+          width={12}
+          height={12}
+          className="object-contain"
+        />
+      )}
       {children}
+      {iconRight && (
+        <Image
+          src={iconRight}
+          alt="icon-right"
+          width={12}
+          height={12}
+          className="object-contain"
+        />
+      )}
     </button>
   );
 }
