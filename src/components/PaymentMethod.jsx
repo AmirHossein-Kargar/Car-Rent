@@ -27,7 +27,7 @@ export default function PaymentMethod() {
     }
 
     return (
-        <section className='w-[350px] h-[732px] bg-white rounded-[10px] border p-4 overflow-hidden'>
+        <section className='w-full max-w-sm md:max-w-4xl h-[732px] md:h-[596px] bg-white rounded-[10px] p-4 overflow-hidden mx-auto'>
             <SectionHeader title={"Payment Method"} subtitle={"Please enter your payment method"} step={3} />
 
             {paymentMethods.map((method) => (
@@ -50,7 +50,7 @@ export default function PaymentMethod() {
                         </div>
 
                         {expandedMethod === method.name && method.name === 'Credit Card' && (
-                            <div className='space-y-3' onClick={(e) => e.stopPropagation()}>
+                            <div className='space-y-3 md:grid md:grid-cols-2' onClick={(e) => e.stopPropagation()}>
                                 {cardFields.map((field, index) => (
                                     <div key={field.label} className='space-y-2'>
                                         <h3 className='font-semibold text-sm text-secondary-500'>
