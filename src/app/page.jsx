@@ -1,5 +1,6 @@
 import BillingInfo from "@/components/BillingInfo";
 import Card from "@/components/card";
+import PaymentMethod from "@/components/PaymentMethod";
 import RentalInfo from "@/components/RentalInfo";
 import RentalSummary from "@/components/RentalSummary";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <RentalSummary />
       <BillingInfo />
       <RentalInfo />
+      <PaymentMethod /> 
     </div>
   );
 }
