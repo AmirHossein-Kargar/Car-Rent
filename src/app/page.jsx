@@ -1,5 +1,6 @@
 import BillingInfo from "@/components/BillingInfo";
 import Card from "@/components/card";
+import RentalInfo from "@/components/RentalInfo";
 import RentalSummary from "@/components/RentalSummary";
 
 
@@ -9,6 +10,7 @@ export default function Home() {
       <Card />
       <RentalSummary />
       <BillingInfo />
+      <RentalInfo />
     </div>
   );
 }
