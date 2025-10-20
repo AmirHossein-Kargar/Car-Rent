@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import Button from './Button'
+import Button from '@/ui/Button'
+import Input from '@/ui/Input'
 
 export default function RentalSummary() {
     return (
@@ -36,11 +37,11 @@ export default function RentalSummary() {
 
                 <form className='relative mt-6 w-full'>
                     <label htmlFor="promo-code" className="sr-only">Apply promo code</label>
-                    <input
+                    <Input
                         id="promo-code"
                         type="text"
                         placeholder='Apply promo code'
-                        className='bg-[#F6F7F9] w-full h-10 rounded-[10px] pl-5 pr-24 placeholder:text-secondary-300 placeholder:font-medium placeholder:text-xs focus:outline-none'
+                        className='max-w-none h-10 pl-5 pr-24 placeholder:font-medium'
                     />
                     <div className='absolute right-2 top-1/2 transform -translate-y-1/2'>
                         <Button className="text-xs px-3 py-1" variant='primary' size='small'>Apply now</Button>

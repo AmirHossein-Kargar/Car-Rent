@@ -1,6 +1,7 @@
 import BillingInfo from "@/components/BillingInfo";
 import Card from "@/components/card";
 import RentalSummary from "@/components/RentalSummary";
+import Input from "@/ui/Input";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Card />
       <RentalSummary />
       <BillingInfo />
+      <Input type={"text"} placeholder={"Your name"}/>
     </div>
   );
 }

@@ -1,14 +1,14 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Button from './Button'
+import Button from '../ui/Button'
 import Link from 'next/link'
 
 export default function Card() {
     const [liked, setLiked] = useState(false)
     return (
         <article className='w-full max-w-[327px] md:max-w-[304px] md:h-[388px] h-[240px] rounded-[10px] p-6 flex flex-col relative'>
-        <button
+            <button
                 onClick={() => setLiked(!liked)}
                 className='absolute right-6 top-6 md:w-[24px] md:h-[24px] w-4 h-4 bg-transparent border-none cursor-pointer transition-transform hover:scale-110'
                 aria-label="Add to favorites"
