@@ -11,7 +11,7 @@ export default function BillingInfo() {
     ];
 
     return (
-        <section className='w-[327px] md:w-[852px] h-[516px] md:h-[336px] bg-white rounded-[10px] p-4 md:p-6'>
+        <section className='w-full max-w-sm md:max-w-4xl h-[516px] md:h-[336px] bg-white rounded-[10px] p-4 md:p-6 mx-auto'>
             <SectionHeader
                 title="Billing Info"
                 subtitle="Please enter your billing info"

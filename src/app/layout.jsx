@@ -1,7 +1,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import Input from "@/ui/Input";
+import SearchInput from "@/components/SearchInput";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -43,34 +43,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${plusJakartaSans.variable}`}>
-        <header className="w-full h-[288px] md:h-[124px] px-6 md:px-16 py-8">
+        <header className="w-full h-[288px] md:h-[124px] px-4 md:px-16 py-8">
           {/* profile and notification */}
-          <nav className="flex justify-between">
+          <nav className="flex justify-between items-center max-w-7xl mx-auto">
 
-            <div className="flex items-center gap-16">
+            <div className="flex items-center gap-4 md:gap-16">
               <Image src={"/Logo.svg"} width={108} height={28} alt="logo" className="md:w-[148px] md:h-[44px]" />
-
-              <div className="relative hidden md:block">
-                <Input
-                  className="!w-[500px] !h-8 font-medium text-sm text-secondary-400 bg-white border border-[#C3D4E966] rounded-[70px] px-4 pl-10 pr-10"
-                  placeholder="Search something here"
-                />
-                <Image
-                  src="/search.svg"
-                  width={16}
-                  height={16}
-                  alt="search"
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2"
-                />
-                <Image
-                  src="/filter.svg"
-                  width={16}
-                  height={16}
-                  alt="filter"
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
-                />
-              </div>
-
+              <SearchInput variant="desktop" />
             </div>
 
             <div className="flex gap-5">
@@ -95,24 +74,9 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
 
-          <div className="flex items-center gap-4 my-8 md:hidden">
-            <Input
-              className="bg-white border border-[#C3D4E966] flex-1 max-w-sm !h-[48px] px-4"
-              placeholder={"Search something here"}
-            />
-            <button className="w-12 h-12 border border-[#C3D4E966] rounded-[10px] flex justify-center items-center">
-              <Image src={"/filter.svg"} width={24} height={24} alt="filter" />
-            </button>
-          </div>
+          <SearchInput variant="mobile" />
 
-          {/* <div className="flex justify-center relative">
-            <Image src={"/Ads.svg"} width={327} height={232} alt="ads" />
-            <h1 className="absolute top-4 left-10 flex items-center justify-center text-white font-semibold text-base">The Best Platform for Car Rental</h1>
-            <span className="absolute top-12 left-10 font-medium text-xs text-white max-w-[216px] leading-[160%]">Ease of doing a car rental safely and reliably. Of course at a low price.</span>
-            <div className="absolute top-25 left-10">
-              <Button size="small">Rental car</Button>
-            </div>
-          </div> */}
+      
         </header>
 
         <main>

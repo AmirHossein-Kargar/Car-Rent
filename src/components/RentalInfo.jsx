@@ -10,7 +10,7 @@ const times = ['09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', '02:0
 export default function RentalInfo() {
     return (
         <section
-            className='w-[327px] md:w-[852px] md:h-fit h-[818px] p-4 md:px-6 bg-white rounded-[10px]'
+            className='w-full max-w-sm md:max-w-4xl md:h-fit h-[818px] p-4 md:px-6 bg-white rounded-[10px] mx-auto'
             aria-labelledby="rental-info-title"
         >
             <SectionHeader

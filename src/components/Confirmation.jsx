@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function Confirmation() {
     return (
-        <div className='w-[450px] md:w-[852px]  h-[476px] rounded-[10px] bg-white border p-4'>
+        <div className='w-full max-w-sm md:max-w-4xl h-[476px] rounded-[10px] bg-white p-4 mx-auto'>
             <SectionHeader
                 title="Confirmation"
                 subtitle="Almost there! Just a few steps left."

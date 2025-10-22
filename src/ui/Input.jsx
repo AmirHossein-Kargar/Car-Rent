@@ -5,7 +5,7 @@ export default function Input({ type, placeholder, className = '', ...props }) {
         <input
             type={type}
             placeholder={placeholder}
-            className={`${className} rounded-[10px] w-full max-w-[295px] h-[56px] px-6 bg-[#F6F7F9] outline-none placeholder:font-normal placeholder:text-xs placeholder:text-secondary-300`}
+            className={`${className} rounded-[10px] w-full h-[56px] px-6 bg-[#F6F7F9] outline-none placeholder:font-normal placeholder:text-xs placeholder:text-secondary-300`}
             {...props}
         />
     )
