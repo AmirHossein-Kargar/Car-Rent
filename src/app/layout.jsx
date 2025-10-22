@@ -2,7 +2,6 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Input from "@/ui/Input";
-import Button from "@/ui/Button";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -10,6 +9,30 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   style: ["normal", "italic"],
   variable: "--font-plus-jakarta-sans",
 });
+
+const headerIcons = [
+  {
+    src: "/heart-dark.svg",
+    width: 20,
+    height: 20,
+    alt: "heart",
+    hasNotification: false
+  },
+  {
+    src: "/notification.svg",
+    width: 24,
+    height: 24,
+    alt: "notification",
+    hasNotification: true
+  },
+  {
+    src: "/setting.svg",
+    width: 24,
+    height: 24,
+    alt: "setting",
+    hasNotification: false
+  }
+];
 
 export const metadata = {
   title: "Create Next App",
@@ -20,42 +43,81 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${plusJakartaSans.variable}`}>
-        <div className="border w-full h-[288px] px-6 py-8">
+        <header className="w-full h-[288px] md:h-[124px] px-6 md:px-16 py-8">
+          {/* profile and notification */}
+          <nav className="flex justify-between">
 
-          <div className="flex justify-between">
-            <Image src={"/Logo.svg"} width={108} height={28} alt="logo" />
-            <div className="w-10 h-10 rounded-full bg-gray-200 bg-opacity-80 flex items-center justify-center overflow-hidden">
-              <Image
-                src={"/profile.svg"}
-                width={28}
-                height={28}
-                alt="Profile"
-                className="rounded-full object-cover"
-              />
+            <div className="flex items-center gap-16">
+              <Image src={"/Logo.svg"} width={108} height={28} alt="logo" className="md:w-[148px] md:h-[44px]" />
+
+              <div className="relative hidden md:block">
+                <Input
+                  className="!w-[500px] !h-8 font-medium text-sm text-secondary-400 bg-white border border-[#C3D4E966] rounded-[70px] px-4 pl-10 pr-10"
+                  placeholder="Search something here"
+                />
+                <Image
+                  src="/search.svg"
+                  width={16}
+                  height={16}
+                  alt="search"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2"
+                />
+                <Image
+                  src="/filter.svg"
+                  width={16}
+                  height={16}
+                  alt="filter"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                />
+              </div>
+
             </div>
-          </div>
 
-          <div className="flex items-center gap-4 my-8">
+            <div className="flex gap-5">
+              {headerIcons.map((icon, index) => (
+                <button key={index} className="w-10 h-10 rounded-full border border-[#C3D4E966] hidden md:flex items-center justify-center relative">
+                  <Image src={icon.src} width={icon.width} height={icon.height} alt={icon.alt} />
+                  {icon.hasNotification && (
+                    <div className="w-2.5 h-2.5 bg-[#FF4423] rounded-full absolute top-0 z-10 right-1"></div>
+                  )}
+                </button>
+              ))}
+
+              <button className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+                <Image
+                  src={"/profile.svg"}
+                  width={28}
+                  height={28}
+                  alt="Profile"
+                  className="rounded-full object-cover md:w-11 md:h-11"
+                />
+              </button>
+            </div>
+          </nav>
+
+          <div className="flex items-center gap-4 my-8 md:hidden">
             <Input
               className="bg-white border border-[#C3D4E966] flex-1 max-w-sm !h-[48px] px-4"
               placeholder={"Search something here"}
             />
-            <div className="w-12 h-12 border border-[#C3D4E966] rounded-[10px] flex justify-center items-center">
+            <button className="w-12 h-12 border border-[#C3D4E966] rounded-[10px] flex justify-center items-center">
               <Image src={"/filter.svg"} width={24} height={24} alt="filter" />
-            </div>
+            </button>
           </div>
 
-          <div className="flex justify-center relative">
+          {/* <div className="flex justify-center relative">
             <Image src={"/Ads.svg"} width={327} height={232} alt="ads" />
             <h1 className="absolute top-4 left-10 flex items-center justify-center text-white font-semibold text-base">The Best Platform for Car Rental</h1>
             <span className="absolute top-12 left-10 font-medium text-xs text-white max-w-[216px] leading-[160%]">Ease of doing a car rental safely and reliably. Of course at a low price.</span>
             <div className="absolute top-25 left-10">
               <Button size="small">Rental car</Button>
             </div>
-          </div>
+          </div> */}
+        </header>
 
-        </div>
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
