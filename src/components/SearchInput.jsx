@@ -6,7 +6,7 @@ export default function SearchInput({ variant = "desktop" }) {
         return (
             <div className="flex items-center justify-center gap-4 my-8 md:hidden px-4">
                 <Input
-                    className="bg-white border border-[#C3D4E966] flex-1 max-w-sm h-12 px-4"
+                    className="bg-white border border-[#C3D4E966] flex-1 max-w-md h-12 px-4"
                     placeholder="Search something here"
                 />
                 <button className="w-12 h-12 border border-[#C3D4E966] rounded-[10px] flex justify-center items-center">

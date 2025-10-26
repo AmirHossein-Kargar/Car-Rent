@@ -1,7 +1,6 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import SearchInput from "@/components/SearchInput";
+import Header from "@/components/layout/Header";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -10,29 +9,6 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
 });
 
-const headerIcons = [
-  {
-    src: "/heart-dark.svg",
-    width: 20,
-    height: 20,
-    alt: "heart",
-    hasNotification: false
-  },
-  {
-    src: "/notification.svg",
-    width: 24,
-    height: 24,
-    alt: "notification",
-    hasNotification: true
-  },
-  {
-    src: "/setting.svg",
-    width: 24,
-    height: 24,
-    alt: "setting",
-    hasNotification: false
-  }
-];
 
 export const metadata = {
   title: "Create Next App",
@@ -43,42 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${plusJakartaSans.variable}`}>
-        <header className="w-full h-[288px] md:h-[124px] px-4 md:px-16 py-8">
-          {/* profile and notification */}
-          <nav className="flex justify-between items-center max-w-7xl mx-auto">
-
-            <div className="flex items-center gap-4 md:gap-16">
-              <Image src={"/Logo.svg"} width={108} height={28} alt="logo" className="md:w-[148px] md:h-[44px]" />
-              <SearchInput variant="desktop" />
-            </div>
-
-            <div className="flex gap-5">
-              {headerIcons.map((icon, index) => (
-                <button key={index} className="w-10 h-10 rounded-full border border-[#C3D4E966] hidden md:flex items-center justify-center relative">
-                  <Image src={icon.src} width={icon.width} height={icon.height} alt={icon.alt} />
-                  {icon.hasNotification && (
-                    <div className="w-2.5 h-2.5 bg-[#FF4423] rounded-full absolute top-0 z-10 right-1"></div>
-                  )}
-                </button>
-              ))}
-
-              <button className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
-                <Image
-                  src={"/profile.svg"}
-                  width={28}
-                  height={28}
-                  alt="Profile"
-                  className="rounded-full object-cover md:w-11 md:h-11"
-                />
-              </button>
-            </div>
-          </nav>
-
-          <SearchInput variant="mobile" />
-
-      
-        </header>
-
+      <Header />
         <main>
           {children}
         </main>

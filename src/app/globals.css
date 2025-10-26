@@ -92,7 +92,7 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #f6f7f9;
   /* --foreground: #171717; */
 }
 
@@ -104,7 +104,7 @@
 }
 
 body {
-  background: var(--background);
+  background-color: #f6f7f9;
   /* color: var(--foreground); */
   color: black;
   font-family: var(--font-plus-jakarta-sans), sans-serif;
