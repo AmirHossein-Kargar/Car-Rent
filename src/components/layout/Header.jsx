@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SearchInput from "../SearchInput";
 
 const headerIcons = [
@@ -30,10 +31,12 @@ export default function Header() {
     return (
         <header className="w-full h-[288px] md:h-[124px] bg-white px-6 lg:px-16 py-8 md:py-10">
             <section className="flex justify-between items-center">
-              <div className="flex items-center gap-x-8 lg:gap-x-16">
-                  <Image src={"/Logo.svg"} width={108} height={28} alt="logo" className="md:w-[148px] md:h-11" />
-                  <SearchInput variant="desktop" />
-              </div>
+                <div className="flex items-center gap-x-8 lg:gap-x-16">
+                    <Link href="/">
+                        <Image src={"/Logo.svg"} width={108} height={28} alt="logo" className="md:w-[148px] md:h-11" />
+                    </Link>
+                    <SearchInput variant="desktop" />
+                </div>
 
                 <div className="flex items-center gap-5">
                     {/* Other icons - only show on md and above */}

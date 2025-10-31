@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${plusJakartaSans.variable}`}>
+      <body className={`${plusJakartaSans.variable} custom-scrollbar`}>
       <Header />
         <main>
           {children}
