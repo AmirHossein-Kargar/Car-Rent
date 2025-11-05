@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import SearchInput from "../SearchInput";
+import SearchInput from "../../ui/SearchInput";
 
 const headerIcons = [
     {
