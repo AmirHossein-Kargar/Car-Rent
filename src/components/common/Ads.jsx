@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import Button from '@/ui/Button'
+
 export default function Ads() {
     return <div className="flex justify-center relative">
         <Image src={"/Ads.svg"} width={327} height={232} alt="ads" />
