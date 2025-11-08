@@ -14,7 +14,7 @@ export default function Dropdown({ options = [], placeholder = 'Select an option
             >
                 <span className={selected ? 'text-secondary-500' : 'text-secondary-300'}>{selected || placeholder}</span>
                 <img
-                    src="/arrow-down.svg"
+                    src="/icons/ui/arrow-down.svg"
                     alt="dropdown arrow"
                     className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
                 />

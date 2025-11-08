@@ -1,16 +1,16 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Button from '../../ui/Button'
+import Button from '@/ui/Button'
 import Link from 'next/link'
 
 export default function CardWeb() {
     const [liked, setLiked] = useState(false)
 
     const specifications = [
-        { icon: "/gas-station.svg", value: "80L", alt: "fuel capacity" },
-        { icon: "/gearbox.svg", value: "Manual", alt: "transmission type" },
-        { icon: "/user.svg", value: "6 People", alt: "seating capacity" }
+        { icon: "/icons/car/gas-station.svg", value: "80L", alt: "fuel capacity" },
+        { icon: "/icons/car/gearbox.svg", value: "Manual", alt: "transmission type" },
+        { icon: "/icons/ui/user.svg", value: "6 People", alt: "seating capacity" }
     ]
 
     return (
@@ -21,7 +21,7 @@ export default function CardWeb() {
                 aria-label="Add to favorites"
             >
                 <Image
-                    src={liked ? "/heart.svg" : "/heart-stroke.svg"}
+                    src={liked ? "/icons/ui/heart.svg" : "/icons/ui/heart-stroke.svg"}
                     width={24}
                     height={24}
                     alt='heart'

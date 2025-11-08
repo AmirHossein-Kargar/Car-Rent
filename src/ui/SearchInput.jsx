@@ -25,7 +25,7 @@ export default function SearchInput({ variant = "desktop" }) {
 
                 {/* Search Icon */}
                 <Image
-                    src="/search.svg"
+                    src="/icons/ui/search.svg"
                     width={isMobile ? 24 : 20}
                     height={isMobile ? 24 : 20}
                     alt="search"
@@ -35,7 +35,7 @@ export default function SearchInput({ variant = "desktop" }) {
                 {/* Filter Icon */}
                 {!isMobile && (
                     <Image
-                        src="/filter.svg"
+                        src="/icons/ui/filter.svg"
                         width={20}
                         height={20}
                         alt="filter"
@@ -47,7 +47,7 @@ export default function SearchInput({ variant = "desktop" }) {
             {/* Mobile Filter Button */}
             {isMobile && (
                 <button className="w-12 h-12 border border-[rgba(195,212,233,0.4)] rounded-[10px] flex justify-center items-center shrink-0">
-                    <Image src="/filter.svg" width={24} height={24} alt="filter" />
+                    <Image src="/icons/ui/filter.svg" width={24} height={24} alt="filter" />
                 </button>
             )}
         </div>

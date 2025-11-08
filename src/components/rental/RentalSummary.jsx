@@ -12,11 +12,11 @@ export default function RentalSummary() {
             </header>
 
             <section className='flex gap-4 my-8'>
-                <Image src={"/rental.svg"} width={116} height={80} className='md:w-[132px] md:h-[108px]' alt='rental car'></Image>
+                <Image src={"/icons/car/rental.svg"} width={116} height={80} className='md:w-[132px] md:h-[108px]' alt='rental car'></Image>
                 <div className='flex flex-col gap-3 md:gap-2'>
                     <h2 className='font-bold text-[20px] md:text-[32px] text-secondary-500'>Nissan GT - R</h2>
                     <div className='flex flex-col gap-1 md:flex-row md:gap-2'>
-                        <Image src={"/star.svg"} width={76} height={12} alt='5 star rating'></Image>
+                        <Image src={"/icons/ui/star.svg"} width={76} height={12} alt='5 star rating'></Image>
                         <p className='font-medium text-xs md:text-sm text-[#3D5278]'>440+ Reviewer</p>
                     </div>
                 </div>

@@ -9,9 +9,9 @@ export default function PaymentMethod() {
     const [expandedMethod, setExpandedMethod] = useState(null)
 
     const paymentMethods = [
-        { name: 'Credit Card', icon: '/Visa.svg', alt: 'Visa' },
-        { name: 'PayPal', icon: '/PayPal.svg', alt: 'paypal' },
-        { name: 'Bitcoin', icon: '/Bitcoin.svg', alt: 'Bitcoin' }
+        { name: 'Credit Card', icon: '/icons/payment/Visa.svg', alt: 'Visa' },
+        { name: 'PayPal', icon: '/icons/payment/PayPal.svg', alt: 'paypal' },
+        { name: 'Bitcoin', icon: '/icons/payment/Bitcoin.svg', alt: 'Bitcoin' }
     ]
 
     const cardFields = [
@@ -41,7 +41,7 @@ export default function PaymentMethod() {
                             <div className='flex items-center gap-3'>
                                 <div className={`w-4 h-4 rounded-full flex items-center justify-center ${selectedMethod === method.name ? '' : 'border-2 border-secondary-300'}`}>
                                     {selectedMethod === method.name && (
-                                        <Image src={"/Mark.svg"} width={16} height={16} alt='selected' />
+                                        <Image src={"/icons/ui/Mark.svg"} width={16} height={16} alt='selected' />
                                     )}
                                 </div>
                                 <span className='font-semibold text-base text-secondary-500'>{method.name}</span>

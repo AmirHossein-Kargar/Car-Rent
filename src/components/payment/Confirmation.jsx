@@ -29,7 +29,7 @@ export default function Confirmation() {
                     <Button size='large'>Rent now</Button>
                 </div>
                 <div className='space-y-4 mt-5'>
-                    <Image src={"/shield.svg"} width={32} height={32} alt='shield' />
+                    <Image src={"/icons/ui/shield.svg"} width={32} height={32} alt='shield' />
                     <SectionHeader
                         title={"All your data are safe"}
                         subtitle={"We are using the most advanced security to provide you the best experience ever."}

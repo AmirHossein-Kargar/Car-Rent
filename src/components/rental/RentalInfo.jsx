@@ -24,7 +24,7 @@ export default function RentalInfo() {
                 <fieldset className='mt-6 flex flex-col'>
                     <legend className='flex gap-2 items-center'>
                         <Image
-                            src="/Mark.svg"
+                            src="/icons/ui/Mark.svg"
                             width={16}
                             height={16}
                             alt="Pick-up location marker"
@@ -78,7 +78,7 @@ export default function RentalInfo() {
                 <fieldset className='flex flex-col'>
                     <legend className='mt-6 flex gap-2 items-center'>
                         <Image
-                            src="/MarkDrop.svg"
+                            src="/icons/ui/MarkDrop.svg"
                             width={16}
                             height={16}
                             alt="Drop-off location marker"

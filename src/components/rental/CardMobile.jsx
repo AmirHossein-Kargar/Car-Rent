@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Button from '../../ui/Button'
+import Button from '@/ui/Button'
 import Link from 'next/link'
 
 export default function CardMobile() {
@@ -15,7 +15,7 @@ export default function CardMobile() {
                 aria-label="Add to favorites"
             >
                 <Image
-                    src={liked ? "/heart.svg" : "/heart-stroke.svg"}
+                    src={liked ? "/icons/ui/heart.svg" : "/icons/ui/heart-stroke.svg"}
                     width={16}
                     height={16}
                     alt='heart'
@@ -41,15 +41,15 @@ export default function CardMobile() {
 
                 <section className='flex flex-col justify-center font-medium gap-4 text-xs text-secondary-300 w-fit h-fit' aria-label="Car specifications">
                     <div className='flex items-center gap-1'>
-                        <Image src={"/gas-station.svg"} width={14} height={14} alt='fuel capacity'></Image>
+                        <Image src={"/icons/car/gas-station.svg"} width={14} height={14} alt='fuel capacity'></Image>
                         <span>80L</span>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <Image src={"/gearbox.svg"} width={14} height={14} alt='transmission type'></Image>
+                        <Image src={"/icons/car/gearbox.svg"} width={14} height={14} alt='transmission type'></Image>
                         <span>Manual</span>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <Image src={"/user.svg"} width={14} height={14} alt='seating capacity'></Image>
+                        <Image src={"/icons/ui/user.svg"} width={14} height={14} alt='seating capacity'></Image>
                         <span>6 People</span>
                     </div>
                 </section>

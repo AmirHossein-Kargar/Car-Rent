@@ -1,24 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import SearchInput from "../../ui/SearchInput";
+import SearchInput from "@/ui/SearchInput";
 
 const headerIcons = [
     {
-        src: "/heart-dark.svg",
+        src: "/icons/ui/heart-dark.svg",
         width: 24,
         height: 24,
         alt: "heart",
         hasNotification: false
     },
     {
-        src: "/notification.svg",
+        src: "/icons/ui/notification.svg",
         width: 24,
         height: 24,
         alt: "notification",
         hasNotification: true
     },
     {
-        src: "/setting.svg",
+        src: "/icons/ui/setting.svg",
         width: 24,
         height: 24,
         alt: "setting",
@@ -58,7 +58,7 @@ export default function Header() {
 
                     {/* Profile icon - always visible */}
                     <div className="w-7 h-7 md:w-11 md:h-11 border border-[rgba(195,212,233,0.4)] rounded-full flex justify-center items-center">
-                        <Image src={"/profile.svg"} width={28} height={28} className="md:w-11 md:h-11" alt="profile" />
+                        <Image src={"/icons/ui/profile.svg"} width={28} height={28} className="md:w-11 md:h-11" alt="profile" />
                     </div>
                 </div>
 
