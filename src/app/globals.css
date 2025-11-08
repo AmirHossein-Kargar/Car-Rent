@@ -112,7 +112,7 @@ body {
 
 .custom-scrollbar {
   max-height: 25rem; /* Tailwind's max-h-100 (100 * 0.25rem = 25rem) */
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 /* Scrollbar styles */
@@ -135,4 +135,13 @@ body {
 
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #525252; /* Tailwind bg-neutral-600 */
+}
+/* Hide scrollbar for mobile slider */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }

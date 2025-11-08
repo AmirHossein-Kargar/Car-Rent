@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 
-export default function CustomDropdown({ options = [], placeholder = 'Select an option', className = '' }) {
+export default function Dropdown({ options = [], placeholder = 'Select an option', className = '' }) {
     const [isOpen, setIsOpen] = useState(false)
     const [selected, setSelected] = useState('')
 

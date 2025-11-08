@@ -29,7 +29,7 @@ const headerIcons = [
 
 export default function Header() {
     return (
-        <header className="w-full h-[288px] md:h-[124px] bg-white px-6 lg:px-16 py-8 md:py-10">
+        <header className="w-full h-[288px] md:h-[124px] bg-white px-6 lg:px-16 py-8 md:py-10 relative">
             <section className="flex justify-between items-center">
                 <div className="flex items-center gap-x-8 lg:gap-x-16">
                     <Link href="/">
