@@ -31,7 +31,7 @@ export default function CardMobile() {
             <main className="flex flex-row justify-between gap-4 my-4 p-1">
                 <figure className="relative w-[160px] h-[64px] overflow-hidden rounded-md">
                     <Image
-                        src="/Car.svg"
+                        src="https://ik.imagekit.io/9r9vtkidc/CR%20-V.svg?updatedAt=1762610294323"
                         alt="CR-V SUV car"
                         fill
                         className="object-center"

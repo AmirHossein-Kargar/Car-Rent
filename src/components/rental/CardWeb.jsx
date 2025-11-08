@@ -37,7 +37,7 @@ export default function CardWeb() {
             <main className="flex flex-col gap-9 my-10">
                 <figure className="relative w-full h-[100px] overflow-hidden rounded-md">
                     <Image
-                        src="/Car.svg"
+                        src="https://ik.imagekit.io/9r9vtkidc/CR%20-V.svg?updatedAt=1762610294323"
                         alt="CR-V SUV car"
                         fill
                         className="object-center"
