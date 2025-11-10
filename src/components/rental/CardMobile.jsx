@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Button from '@/ui/Button'
 import Link from 'next/link'
 
-export default function CardMobile() {
+export default function CardMobile({ car }) {
     const [liked, setLiked] = useState(false)
 
     return (
@@ -24,15 +24,15 @@ export default function CardMobile() {
             </button>
 
             <header className='w-[96px] h-fit flex flex-col gap-1'>
-                <h1 className='font-semibold text-[16px] text-secondary-500'>CR - V</h1>
-                <p className='font-medium text-[12px] text-secondary-300'>SUV</p>
+                <h1 className='font-semibold text-[16px] text-secondary-500'>{car?.model || 'CR - V'}</h1>
+                <p className='font-medium text-[12px] text-secondary-300'>{car?.brand || 'Honda'}</p>
             </header>
 
-            <main className="flex flex-row justify-between gap-4 my-4 p-1">
+            <main className="flex flex-row justify-between gap-4 my-4">
                 <figure className="relative w-[160px] h-[64px] overflow-hidden rounded-md">
                     <Image
-                        src="https://ik.imagekit.io/9r9vtkidc/CR%20-V.svg?updatedAt=1762610294323"
-                        alt="CR-V SUV car"
+                        src={car?.image_url || "https://ik.imagekit.io/9r9vtkidc/CR%20-V.svg?updatedAt=1762610294323"}
+                        alt={`${car?.brand || 'Honda'} ${car?.model || 'CR-V'} car`}
                         fill
                         className="object-center"
                     />
@@ -42,25 +42,25 @@ export default function CardMobile() {
                 <section className='flex flex-col justify-center font-medium gap-4 text-xs text-secondary-300 w-fit h-fit' aria-label="Car specifications">
                     <div className='flex items-center gap-1'>
                         <Image src={"/icons/car/gas-station.svg"} width={14} height={14} alt='fuel capacity'></Image>
-                        <span>80L</span>
+                        <span>{car?.tank_capacity || 80}L</span>
                     </div>
                     <div className='flex items-center gap-1'>
                         <Image src={"/icons/car/gearbox.svg"} width={14} height={14} alt='transmission type'></Image>
-                        <span>Manual</span>
+                        <span>{car?.transmission || 'Manual'}</span>
                     </div>
                     <div className='flex items-center gap-1'>
                         <Image src={"/icons/ui/user.svg"} width={14} height={14} alt='seating capacity'></Image>
-                        <span>6 People</span>
+                        <span>{car?.seating_capacity || 6} People</span>
                     </div>
                 </section>
             </main>
 
             <footer className='flex justify-between items-center mt-auto'>
                 <div>
-                    <span className='font-bold text-[16px] text-secondary-500'>$80.00/</span>
-                    <span className='text-secondary-300 font-bold text-[12px]'>day</span>
+                    <span className='font-bold text-[16px] text-secondary-500'>${car?.price_per_day || 80}.00/</span>
+                    <span className='text-secondary-300 font-bold text-[12px]'> day</span>
                 </div>
-                <Link href={"/"}>
+                <Link href={`/car/${car?.id || ''}`}>
                     <Button size='medium'>Rental Now</Button>
                 </Link>
             </footer>
